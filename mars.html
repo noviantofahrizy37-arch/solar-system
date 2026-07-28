@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars - Solar System Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="nav-bar">
+        <a class="nav-bar__logo" href="index.html">SOLAR SYSTEM</a>
+        <div class="nav-links">
+            <a class="nav-link" href="index.html">Beranda</a>
+            <a class="button-primary" href="index.html">Jelajahi Tata Surya</a>
+        </div>
+    </nav>
+
+    <!-- Detail Layout -->
+    <main class="container detail-layout">
+        <!-- Top Section Grid (WIREFRAME.png style) -->
+        <div class="detail-grid">
+            <!-- 3D Model (Left Column) -->
+            <section class="card-content model-card" aria-label="Visualisasi 3D Mars">
+                <div class="canvas-container">
+                    <canvas id="planet-canvas" data-model="assets/models/mars.glb"></canvas>
+                </div>
+                <div class="model-instructions">Gunakan mouse untuk memutar dan zoom model 3D</div>
+            </section>
+
+            <!-- Key Characteristics (Right Column) -->
+            <section class="card-content info-card" aria-label="Informasi Utama Mars">
+                <span class="eyebrow">Planet Terestrial</span>
+                <h1 class="display-md">Mars</h1>
+                <p class="body-sm" style="color: var(--body); margin-bottom: 16px;">
+                    Planet merah berdebu yang dingin dengan atmosfer tipis dan gunung berapi raksasa.
+                </p>
+                <table class="data-table">
+                    <tbody>
+                        <tr>
+                            <th>Tipe</th>
+                            <td>Planet Terestrial</td>
+                        </tr>
+                        <tr>
+                            <th>Massa</th>
+                            <td>6.39 × 10²³ kg</td>
+                        </tr>
+                        <tr>
+                            <th>Diameter</th>
+                            <td>6,779 km</td>
+                        </tr>
+                        <tr>
+                            <th>Jarak dari Matahari</th>
+                            <td>227.9 juta km</td>
+                        </tr>
+                        <tr>
+                            <th>Suhu Permukaan</th>
+                            <td>-153 °C hingga 20 °C</td>
+                        </tr>
+                        <tr>
+                            <th>Periode Orbit</th>
+                            <td>687 Hari Bumi</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <!-- Detailed Description Card (Bottom Section) -->
+        <section class="card-content description-card" aria-label="Deskripsi Lengkap Mars">
+            <h2 class="display-sm">Sejarah & Eksplorasi Mars</h2>
+            <p>
+                Mars adalah planet keempat dari Matahari dan planet terkecil kedua di Tata Surya, setelah Merkurius. Mars sering disebut sebagai "Planet Merah" karena efek besi oksida (karat) yang melimpah di permukaannya, memberikan tampilan kemerahan yang khas di antara benda-benda langit.
+            </p>
+            <p>
+                Mars adalah planet gurun yang dingin dengan atmosfer yang sangat tipis yang didominasi oleh karbon dioksida. Di masa lalu yang jauh, Mars terbukti memiliki air cair yang melimpah mengalir di permukaannya, menjadikannya salah satu target utama dalam pencarian kehidupan mikroskopis di luar Bumi. Mars memiliki dua satelit alami kecil: Phobos dan Deimos.
+            </p>
+
+            <h2 class="display-sm" style="margin-top: 16px;">Fakta Menarik</h2>
+            <ul class="fun-facts">
+                <li>Mars adalah rumah bagi Olympus Mons, gunung berapi terbesar di Tata Surya, yang tingginya sekitar tiga kali tinggi Gunung Everest.</li>
+                <li>Suhu rata-rata di Mars sangat dingin, sekitar -62 °C, tetapi suhu di dekat garis khatulistiwa bisa mencapai 20 °C pada siang hari di musim panas.</li>
+                <li>Robot rover NASA seperti Curiosity dan Perseverance saat ini sedang menjelajahi permukaan Mars untuk mencari tanda-tanda kehidupan kuno.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">SOLAR SYSTEM</div>
+            <div class="footer-copy">&copy; 2026 Solar System Explorer. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Three.js Module Import -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="js/planet-viewer.js"></script>
+</body>
+</html>

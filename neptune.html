@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neptune (Neptunus) - Solar System Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="nav-bar">
+        <a class="nav-bar__logo" href="index.html">SOLAR SYSTEM</a>
+        <div class="nav-links">
+            <a class="nav-link" href="index.html">Beranda</a>
+            <a class="button-primary" href="index.html">Jelajahi Tata Surya</a>
+        </div>
+    </nav>
+
+    <!-- Detail Layout -->
+    <main class="container detail-layout">
+        <!-- Top Section Grid (WIREFRAME.png style) -->
+        <div class="detail-grid">
+            <!-- 3D Model (Left Column) -->
+            <section class="card-content model-card" aria-label="Visualisasi 3D Neptune">
+                <div class="canvas-container">
+                    <canvas id="planet-canvas" data-model="assets/models/neptune.glb"></canvas>
+                </div>
+                <div class="model-instructions">Gunakan mouse untuk memutar dan zoom model 3D</div>
+            </section>
+
+            <!-- Key Characteristics (Right Column) -->
+            <section class="card-content info-card" aria-label="Informasi Utama Neptune">
+                <span class="eyebrow">Raksasa Es</span>
+                <h1 class="display-md">Neptune (Neptunus)</h1>
+                <p class="body-sm" style="color: var(--body); margin-bottom: 16px;">
+                    Planet paling jauh, berangin kencang, dan berwarna biru tua yang menawan.
+                </p>
+                <table class="data-table">
+                    <tbody>
+                        <tr>
+                            <th>Tipe</th>
+                            <td>Raksasa Es</td>
+                        </tr>
+                        <tr>
+                            <th>Massa</th>
+                            <td>1.024 × 10²⁶ kg (17 kali Bumi)</td>
+                        </tr>
+                        <tr>
+                            <th>Diameter</th>
+                            <td>49,244 km</td>
+                        </tr>
+                        <tr>
+                            <th>Jarak dari Matahari</th>
+                            <td>4.495 miliar km</td>
+                        </tr>
+                        <tr>
+                            <th>Suhu Rata-rata</th>
+                            <td>~-201 °C</td>
+                        </tr>
+                        <tr>
+                            <th>Periode Orbit</th>
+                            <td>165 Tahun Bumi</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <!-- Detailed Description Card (Bottom Section) -->
+        <section class="card-content description-card" aria-label="Deskripsi Lengkap Neptune">
+            <h2 class="display-sm">Sejarah & Penemuan Neptunus</h2>
+            <p>
+                Neptunus adalah planet kedelapan dan paling jauh dari Matahari di Tata Surya. Ia adalah planet raksasa es yang berukuran empat kali diameter Bumi. Dinamai dari dewa laut Romawi, Neptunus memiliki atmosfer biru cerah yang sangat dinamis dengan pola cuaca yang ekstrem.
+            </p>
+            <p>
+                Neptunus adalah planet pertama di Tata Surya yang penemuannya tidak dilakukan melalui pengamatan langsung melainkan melalui perhitungan matematis terlebih dahulu, setelah para astronom mengamati ketidakstabilan di orbit Uranus. Planet ini memiliki angin kencang supersonik yang bertiup hingga 2,100 km/jam, menjadikannya planet paling berangin di Tata Surya. Neptunus memiliki 14 satelit alami yang diketahui, dengan Triton sebagai yang terbesar.
+            </p>
+
+            <h2 class="display-sm" style="margin-top: 16px;">Fakta Menarik</h2>
+            <ul class="fun-facts">
+                <li>Neptunus membutuhkan waktu 165 tahun Bumi untuk mengorbit Matahari sekali; ia baru menyelesaikan orbit pertamanya sejak penemuannya pada tahun 1846 pada tahun 2011.</li>
+                <li>Triton, bulan terbesarnya, mengorbit Neptunus dengan arah yang berlawanan dari rotasi planet tersebut (orbit retrograde), menunjukkan bahwa Triton awalnya adalah planet kerdil Sabuk Kuiper yang tertangkap oleh gravitasi Neptunus.</li>
+                <li>Hanya ada satu wahana antariksa yang pernah mengunjungi Neptunus dari jarak dekat: Voyager 2 pada bulan Agustus 1989.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">SOLAR SYSTEM</div>
+            <div class="footer-copy">&copy; 2026 Solar System Explorer. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Three.js Module Import -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="js/planet-viewer.js"></script>
+</body>
+</html>

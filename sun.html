@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun (Matahari) - Solar System Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="nav-bar">
+        <a class="nav-bar__logo" href="index.html">SOLAR SYSTEM</a>
+        <div class="nav-links">
+            <a class="nav-link" href="index.html">Beranda</a>
+            <a class="button-primary" href="index.html">Jelajahi Tata Surya</a>
+        </div>
+    </nav>
+
+    <!-- Detail Layout -->
+    <main class="container detail-layout">
+        <!-- Top Section Grid (WIREFRAME.png style) -->
+        <div class="detail-grid">
+            <!-- 3D Model (Left Column) -->
+            <section class="card-content model-card" aria-label="Visualisasi 3D Sun">
+                <div class="canvas-container">
+                    <canvas id="planet-canvas" data-model="assets/models/sun.glb"></canvas>
+                </div>
+                <div class="model-instructions">Gunakan mouse untuk memutar dan zoom model 3D</div>
+            </section>
+
+            <!-- Key Characteristics (Right Column) -->
+            <section class="card-content info-card" aria-label="Informasi Utama Sun">
+                <span class="eyebrow">Bintang Pusat</span>
+                <h1 class="display-md">Sun (Matahari)</h1>
+                <p class="body-sm" style="color: var(--body); margin-bottom: 16px;">
+                    Bintang pusat tata surya yang memberi cahaya, panas, dan energi kehidupan.
+                </p>
+                <table class="data-table">
+                    <tbody>
+                        <tr>
+                            <th>Tipe</th>
+                            <td>Bintang (Katai Kuning G2V)</td>
+                        </tr>
+                        <tr>
+                            <th>Massa</th>
+                            <td>1.989 × 10³⁰ kg</td>
+                        </tr>
+                        <tr>
+                            <th>Diameter</th>
+                            <td>1,392,700 km</td>
+                        </tr>
+                        <tr>
+                            <th>Jarak dari Bumi</th>
+                            <td>149.6 juta km</td>
+                        </tr>
+                        <tr>
+                            <th>Suhu Permukaan</th>
+                            <td>~5,500 °C</td>
+                        </tr>
+                        <tr>
+                            <th>Suhu Inti</th>
+                            <td>~15,000,000 °C</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <!-- Detailed Description Card (Bottom Section) -->
+        <section class="card-content description-card" aria-label="Deskripsi Lengkap Sun">
+            <h2 class="display-sm">Sejarah & Peran di Tata Surya</h2>
+            <p>
+                Matahari adalah bintang di pusat Tata Surya. Ia berbentuk bola hampir sempurna dari plasma panas, yang dipanaskan sampai pijar oleh reaksi fusi nuklir di intinya. Matahari memancarkan energi ini terutama sebagai cahaya, ultraviolet, dan radiasi inframerah, yang merupakan sumber energi terpenting bagi kehidupan di Bumi.
+            </p>
+            <p>
+                Gravitasi Matahari yang sangat besar menjaga semua planet, komet, dan asteroid di orbitnya masing-masing. Tanpa gravitasi dan energi dari Matahari, tata surya kita akan menjadi ruang beku dan gelap gulita tanpa kehidupan.
+            </p>
+
+            <h2 class="display-sm" style="margin-top: 16px;">Fakta Menarik</h2>
+            <ul class="fun-facts">
+                <li>Matahari membentuk sekitar 99.86% dari seluruh massa total yang ada di Tata Surya.</li>
+                <li>Cahaya dari Matahari membutuhkan waktu sekitar 8 menit dan 20 detik untuk sampai ke permukaan Bumi.</li>
+                <li>Di dalam inti Matahari, fusi hidrogen mengubah sekitar 600 juta ton hidrogen menjadi helium setiap detiknya.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">SOLAR SYSTEM</div>
+            <div class="footer-copy">&copy; 2026 Solar System Explorer. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Three.js Module Import -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="js/planet-viewer.js"></script>
+</body>
+</html>

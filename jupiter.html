@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jupiter - Solar System Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="nav-bar">
+        <a class="nav-bar__logo" href="index.html">SOLAR SYSTEM</a>
+        <div class="nav-links">
+            <a class="nav-link" href="index.html">Beranda</a>
+            <a class="button-primary" href="index.html">Jelajahi Tata Surya</a>
+        </div>
+    </nav>
+
+    <!-- Detail Layout -->
+    <main class="container detail-layout">
+        <!-- Top Section Grid (WIREFRAME.png style) -->
+        <div class="detail-grid">
+            <!-- 3D Model (Left Column) -->
+            <section class="card-content model-card" aria-label="Visualisasi 3D Jupiter">
+                <div class="canvas-container">
+                    <canvas id="planet-canvas" data-model="assets/models/jupiter.glb"></canvas>
+                </div>
+                <div class="model-instructions">Gunakan mouse untuk memutar dan zoom model 3D</div>
+            </section>
+
+            <!-- Key Characteristics (Right Column) -->
+            <section class="card-content info-card" aria-label="Informasi Utama Jupiter">
+                <span class="eyebrow">Raksasa Gas</span>
+                <h1 class="display-md">Jupiter</h1>
+                <p class="body-sm" style="color: var(--body); margin-bottom: 16px;">
+                    Planet terbesar di Tata Surya kita dengan Bintik Merah Besar yang legendaris.
+                </p>
+                <table class="data-table">
+                    <tbody>
+                        <tr>
+                            <th>Tipe</th>
+                            <td>Raksasa Gas</td>
+                        </tr>
+                        <tr>
+                            <th>Massa</th>
+                            <td>1.898 × 10²⁷ kg (318 kali Bumi)</td>
+                        </tr>
+                        <tr>
+                            <th>Diameter</th>
+                            <td>139,820 km</td>
+                        </tr>
+                        <tr>
+                            <th>Jarak dari Matahari</th>
+                            <td>778.5 juta km</td>
+                        </tr>
+                        <tr>
+                            <th>Suhu Atmosfer</th>
+                            <td>~-108 °C</td>
+                        </tr>
+                        <tr>
+                            <th>Periode Orbit</th>
+                            <td>12 Tahun Bumi</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <!-- Detailed Description Card (Bottom Section) -->
+        <section class="card-content description-card" aria-label="Deskripsi Lengkap Jupiter">
+            <h2 class="display-sm">Sejarah & Karakteristik Jupiter</h2>
+            <p>
+                Jupiter adalah planet kelima dari Matahari dan yang terbesar di Tata Surya. Ia adalah raksasa gas dengan massa lebih dari dua kali lipat gabungan seluruh planet lainnya di Tata Surya. Dinamai dari raja para dewa Romawi, Jupiter sebagian besar terdiri dari hidrogen dan helium, mirip dengan Matahari.
+            </p>
+            <p>
+                Karakteristik Jupiter yang paling terkenal adalah Bintik Merah Besar (Great Red Spot), sebuah badai raksasa yang telah berputar selama ratusan tahun dan ukurannya lebih besar dari Bumi. Jupiter memiliki medan magnet yang luar biasa kuat dan sistem cincin yang redup. Ia dikelilingi oleh puluhan satelit alami, termasuk empat satelit besar Galilean: Io, Europa, Ganymede, dan Callisto.
+            </p>
+
+            <h2 class="display-sm" style="margin-top: 16px;">Fakta Menarik</h2>
+            <ul class="fun-facts">
+                <li>Jupiter berputar sangat cepat pada porosnya; satu hari di Jupiter hanya berlangsung sekitar 10 jam.</li>
+                <li>Ganymede, bulan terbesar Jupiter, adalah bulan terbesar di Tata Surya dan ukurannya bahkan lebih besar dari planet Merkurius.</li>
+                <li>Gaya gravitasi Jupiter yang sangat besar berfungsi sebagai perisai pelindung bagi planet-planet dalam seperti Bumi, dengan menarik atau membelokkan komet dan asteroid yang mendekat.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">SOLAR SYSTEM</div>
+            <div class="footer-copy">&copy; 2026 Solar System Explorer. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Three.js Module Import -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="js/planet-viewer.js"></script>
+</body>
+</html>

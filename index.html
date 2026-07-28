@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Solar System Explorer</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <section class="hero-3d" aria-label="Tampilan 3D tata surya">
+        <a class="hero-auth-button" href="login.html">Login / Register</a>
+        <div class="hero-overlay">
+            <p class="hero-kicker">SOLAR SYSTEM / NV</p>
+            <h2>EXPLORE THE COSMOS</h2>
+            <p class="hero-subtext">Interactive 3D view with a futuristic space experience.</p>
+        </div>
+        <canvas id="space"></canvas>
+    </section>
+
+    <main class="planet-showcase">
+        <div class="showcase-intro">
+            <p class="eyebrow">Planet Collection</p>
+            <h1>Jelajahi delapan planet utama</h1>
+            <p>Bagian ini menyambungkan model 3D di atas dengan kartu planet yang menampilkan visual sesuai nama planet.</p>
+        </div>
+
+        <div class="planet-grid">
+            <a href="mercury.html" class="planet-card">
+                <img src="assets/images/mercury.jpg" alt="Mercury">
+                <div class="planet-card__body">
+                    <h2>Mercury</h2>
+                    <p>Planet terkecil dan terdekat dengan Matahari.</p>
+                </div>
+            </a>
+
+            <a href="venus.html" class="planet-card">
+                <img src="assets/images/venus.jpg" alt="Venus">
+                <div class="planet-card__body">
+                    <h2>Venus</h2>
+                    <p>Planet dengan atmosfer paling tebal dan suhu tinggi.</p>
+                </div>
+            </a>
+
+            <a href="earth.html" class="planet-card">
+                <img src="assets/images/earth.jpg" alt="Earth">
+                <div class="planet-card__body">
+                    <h2>Earth</h2>
+                    <p>Planet tempat kehidupan berkembang dan air melimpah.</p>
+                </div>
+            </a>
+
+            <a href="mars.html" class="planet-card">
+                <img src="assets/images/mars.jpg" alt="Mars">
+                <div class="planet-card__body">
+                    <h2>Mars</h2>
+                    <p>Planet merah dengan gurun luas dan gunung berapi besar.</p>
+                </div>
+            </a>
+
+            <a href="jupiter.html" class="planet-card">
+                <img src="assets/images/jupiter.jpg" alt="Jupiter">
+                <div class="planet-card__body">
+                    <h2>Jupiter</h2>
+                    <p>Planet raksasa gas dengan Bintik Merah Besar yang ikonik.</p>
+                </div>
+            </a>
+
+            <a href="saturn.html" class="planet-card">
+                <img src="assets/images/saturn.jpg" alt="Saturn">
+                <div class="planet-card__body">
+                    <h2>Saturn</h2>
+                    <p>Planet dengan sistem cincin yang paling terkenal.</p>
+                </div>
+            </a>
+
+            <a href="uranus.html" class="planet-card">
+                <img src="assets/images/uranus.jpg" alt="Uranus">
+                <div class="planet-card__body">
+                    <h2>Uranus</h2>
+                    <p>Planet beku yang berputar miring dengan sudut unik.</p>
+                </div>
+            </a>
+
+            <a href="neptune.html" class="planet-card">
+                <img src="assets/images/neptune.jpg" alt="Neptune">
+                <div class="planet-card__body">
+                    <h2>Neptune</h2>
+                    <p>Planet paling jauh dan sangat berangin di tata surya.</p>
+                </div>
+            </a>
+        </div>
+
+        <section class="sun-moon-section" aria-label="Sun dan Moon">
+            <div class="showcase-intro">
+                <p class="eyebrow">Celestial Bodies</p>
+                <h2>Sun & Moon</h2>
+            </div>
+
+            <div class="planet-grid secondary-grid">
+                <a href="sun.html" class="planet-card">
+                    <img src="assets/images/sun.jpg" alt="Sun">
+                    <div class="planet-card__body">
+                        <h2>Sun</h2>
+                        <p>Bintang pusat tata surya yang memberi cahaya dan panas.</p>
+                    </div>
+                </a>
+
+                <a href="moon.html" class="planet-card">
+                    <img src="assets/images/moon.jpg" alt="Moon">
+                    <div class="planet-card__body">
+                        <h2>Moon</h2>
+                        <p>Satelit alami Bumi yang memengaruhi pasang surut laut.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+
+
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/auth.js"></script>
+
+</body>
+</html>

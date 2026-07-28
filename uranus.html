@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uranus - Solar System Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="nav-bar">
+        <a class="nav-bar__logo" href="index.html">SOLAR SYSTEM</a>
+        <div class="nav-links">
+            <a class="nav-link" href="index.html">Beranda</a>
+            <a class="button-primary" href="index.html">Jelajahi Tata Surya</a>
+        </div>
+    </nav>
+
+    <!-- Detail Layout -->
+    <main class="container detail-layout">
+        <!-- Top Section Grid (WIREFRAME.png style) -->
+        <div class="detail-grid">
+            <!-- 3D Model (Left Column) -->
+            <section class="card-content model-card" aria-label="Visualisasi 3D Uranus">
+                <div class="canvas-container">
+                    <canvas id="planet-canvas" data-model="assets/models/uranus.glb"></canvas>
+                </div>
+                <div class="model-instructions">Gunakan mouse untuk memutar dan zoom model 3D</div>
+            </section>
+
+            <!-- Key Characteristics (Right Column) -->
+            <section class="card-content info-card" aria-label="Informasi Utama Uranus">
+                <span class="eyebrow">Raksasa Es</span>
+                <h1 class="display-md">Uranus</h1>
+                <p class="body-sm" style="color: var(--body); margin-bottom: 16px;">
+                    Planet beku biru-hijau yang berotasi miring secara ekstrim di sisinya.
+                </p>
+                <table class="data-table">
+                    <tbody>
+                        <tr>
+                            <th>Tipe</th>
+                            <td>Raksasa Es</td>
+                        </tr>
+                        <tr>
+                            <th>Massa</th>
+                            <td>8.681 × 10²⁵ kg (14.5 kali Bumi)</td>
+                        </tr>
+                        <tr>
+                            <th>Diameter</th>
+                            <td>50,724 km</td>
+                        </tr>
+                        <tr>
+                            <th>Jarak dari Matahari</th>
+                            <td>2.871 miliar km</td>
+                        </tr>
+                        <tr>
+                            <th>Suhu Terdingin</th>
+                            <td>~-224 °C</td>
+                        </tr>
+                        <tr>
+                            <th>Periode Orbit</th>
+                            <td>84 Tahun Bumi</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <!-- Detailed Description Card (Bottom Section) -->
+        <section class="card-content description-card" aria-label="Deskripsi Lengkap Uranus">
+            <h2 class="display-sm">Sejarah & Rotasi Unik Uranus</h2>
+            <p>
+                Uranus adalah planet ketujuh dari Matahari. Ia adalah planet raksasa es, dinamai dari dewa langit Yunani kuno Ouranos (Uranus). Planet ini memiliki komposisi kimia yang mirip dengan Neptunus, dengan atmosfer yang kaya akan hidrogen dan helium, tetapi juga mengandung lebih banyak es air, amonia, dan metana.
+            </p>
+            <p>
+                Keunikan utama Uranus terletak pada kemiringan sumbunya yang sangat ekstrim, hampir 98 derajat. Hal ini membuat Uranus berputar hampir sepenuhnya di sisinya, menyebabkan pergantian musim yang sangat tidak biasa dengan masing-masing kutub mengalami siang dan malam selama 42 tahun secara terus-menerus. Uranus juga memiliki sistem cincin tipis yang vertikal dan 27 satelit alami yang diketahui.
+            </p>
+
+            <h2 class="display-sm" style="margin-top: 16px;">Fakta Menarik</h2>
+            <ul class="fun-facts">
+                <li>Uranus adalah planet pertama yang ditemukan menggunakan teleskop modern, oleh William Herschel pada tahun 1781.</li>
+                <li>Atmosfer Uranus adalah yang terdingin di Tata Surya, dengan suhu minimum mencapai -224.2 °C.</li>
+                <li>Warna biru-hijau pucat pada Uranus disebabkan oleh gas metana di atmosfernya yang menyerap cahaya merah dan memantulkan cahaya biru kembali ke ruang angkasa.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">SOLAR SYSTEM</div>
+            <div class="footer-copy">&copy; 2026 Solar System Explorer. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Three.js Module Import -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="js/planet-viewer.js"></script>
+</body>
+</html>

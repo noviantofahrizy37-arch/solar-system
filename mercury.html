@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercury (Merkurius) - Solar System Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="nav-bar">
+        <a class="nav-bar__logo" href="index.html">SOLAR SYSTEM</a>
+        <div class="nav-links">
+            <a class="nav-link" href="index.html">Beranda</a>
+            <a class="button-primary" href="index.html">Jelajahi Tata Surya</a>
+        </div>
+    </nav>
+
+    <!-- Detail Layout -->
+    <main class="container detail-layout">
+        <!-- Top Section Grid (WIREFRAME.png style) -->
+        <div class="detail-grid">
+            <!-- 3D Model (Left Column) -->
+            <section class="card-content model-card" aria-label="Visualisasi 3D Mercury">
+                <div class="canvas-container">
+                    <canvas id="planet-canvas" data-model="assets/models/mercury.glb"></canvas>
+                </div>
+                <div class="model-instructions">Gunakan mouse untuk memutar dan zoom model 3D</div>
+            </section>
+
+            <!-- Key Characteristics (Right Column) -->
+            <section class="card-content info-card" aria-label="Informasi Utama Mercury">
+                <span class="eyebrow">Planet Terestrial</span>
+                <h1 class="display-md">Mercury (Merkurius)</h1>
+                <p class="body-sm" style="color: var(--body); margin-bottom: 16px;">
+                    Planet terkecil di tata surya dan yang paling dekat dengan Matahari.
+                </p>
+                <table class="data-table">
+                    <tbody>
+                        <tr>
+                            <th>Tipe</th>
+                            <td>Planet Terestrial</td>
+                        </tr>
+                        <tr>
+                            <th>Massa</th>
+                            <td>3.285 × 10²³ kg</td>
+                        </tr>
+                        <tr>
+                            <th>Diameter</th>
+                            <td>4,879 km</td>
+                        </tr>
+                        <tr>
+                            <th>Jarak dari Matahari</th>
+                            <td>57.9 juta km</td>
+                        </tr>
+                        <tr>
+                            <th>Suhu Ekstrim</th>
+                            <td>-180 °C hingga 430 °C</td>
+                        </tr>
+                        <tr>
+                            <th>Periode Orbit</th>
+                            <td>88 Hari Bumi</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <!-- Detailed Description Card (Bottom Section) -->
+        <section class="card-content description-card" aria-label="Deskripsi Lengkap Mercury">
+            <h2 class="display-sm">Sejarah & Struktur Fisik</h2>
+            <p>
+                Merkurius adalah planet terkecil di Tata Surya dan yang terdekat dengan Matahari. Karena kedekatannya dengan Matahari, periode orbitnya sangat cepat, hanya membutuhkan waktu 88 hari Bumi untuk menyelesaikan satu putaran penuh. Namun, rotasi pada porosnya sendiri sangat lambat, membuat satu hari di Merkurius setara dengan 59 hari di Bumi.
+            </p>
+            <p>
+                Planet ini hampir tidak memiliki atmosfer untuk menahan panas. Akibatnya, Merkurius mengalami fluktuasi suhu paling ekstrim di tata surya, beralih dari panas yang membakar di siang hari hingga beku yang amat sangat di malam hari. Permukaannya dipenuhi kawah-kawah besar, mirip dengan Bulan kita, akibat tabrakan asteroid miliaran tahun lalu.
+            </p>
+
+            <h2 class="display-sm" style="margin-top: 16px;">Fakta Menarik</h2>
+            <ul class="fun-facts">
+                <li>Merkurius adalah planet terdekat dari Matahari, tetapi ia bukanlah planet terpanas (gelar itu dipegang oleh Venus).</li>
+                <li>Planet ini memiliki inti besi cair yang sangat besar, mencakup sekitar 85% dari radius planet tersebut.</li>
+                <li>Hanya ada dua misi luar angkasa yang pernah mengunjungi Merkurius: Mariner 10 pada tahun 1974-1975, dan MESSENGER yang mengorbit Merkurius dari tahun 2011 hingga 2015.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">SOLAR SYSTEM</div>
+            <div class="footer-copy">&copy; 2026 Solar System Explorer. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Three.js Module Import -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="js/planet-viewer.js"></script>
+</body>
+</html>

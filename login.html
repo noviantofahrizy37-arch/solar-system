@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Solar System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+    <main class="auth-page__container">
+        <section class="auth-screen" aria-label="Login">
+            <div class="auth-screen__header">
+                <a class="eyebrow auth-home-button" href="index.html">Kembali ke beranda</a>
+                <h1>Welcome to the Cosmos</h1>
+                <p>Masuk untuk melanjutkan perjalanan Anda.</p>
+            </div>
+
+            <form id="login-form" class="auth-card auth-card--single" novalidate>
+                <div class="alert-message" role="alert" aria-live="polite"></div>
+                <label>
+                    <span>Email</span>
+                    <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+                </label>
+                <label>
+                    <span>Password</span>
+                    <input type="password" name="password" placeholder="••••••••" autocomplete="current-password" required>
+                </label>
+                <button type="submit">Masuk</button>
+                <p class="auth-switch">
+                    Belum punya akun? <a href="register.html">Daftar di sini</a>
+                </p>
+            </form>
+        </section>
+    </main>
+    <script type="module" src="js/auth.js"></script>
+</body>
+</html>

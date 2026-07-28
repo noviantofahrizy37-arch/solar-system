@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon (Bulan) - Solar System Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="nav-bar">
+        <a class="nav-bar__logo" href="index.html">SOLAR SYSTEM</a>
+        <div class="nav-links">
+            <a class="nav-link" href="index.html">Beranda</a>
+            <a class="button-primary" href="index.html">Jelajahi Tata Surya</a>
+        </div>
+    </nav>
+
+    <!-- Detail Layout -->
+    <main class="container detail-layout">
+        <!-- Top Section Grid (WIREFRAME.png style) -->
+        <div class="detail-grid">
+            <!-- 3D Model (Left Column) -->
+            <section class="card-content model-card" aria-label="Visualisasi 3D Moon">
+                <div class="canvas-container">
+                    <canvas id="planet-canvas" data-model="assets/models/moon.glb"></canvas>
+                </div>
+                <div class="model-instructions">Gunakan mouse untuk memutar dan zoom model 3D</div>
+            </section>
+
+            <!-- Key Characteristics (Right Column) -->
+            <section class="card-content info-card" aria-label="Informasi Utama Moon">
+                <span class="eyebrow">Satelit Alami</span>
+                <h1 class="display-md">Moon (Bulan)</h1>
+                <p class="body-sm" style="color: var(--body); margin-bottom: 16px;">
+                    Satelit alami Bumi yang memengaruhi pasang surut laut dan menstabilkan sumbu bumi.
+                </p>
+                <table class="data-table">
+                    <tbody>
+                        <tr>
+                            <th>Tipe</th>
+                            <td>Satelit Alami</td>
+                        </tr>
+                        <tr>
+                            <th>Massa</th>
+                            <td>7.342 × 10²² kg (0.012 massa Bumi)</td>
+                        </tr>
+                        <tr>
+                            <th>Diameter</th>
+                            <td>3,474 km</td>
+                        </tr>
+                        <tr>
+                            <th>Jarak dari Bumi</th>
+                            <td>384,400 km</td>
+                        </tr>
+                        <tr>
+                            <th>Suhu Permukaan</th>
+                            <td>-130 °C hingga 120 °C</td>
+                        </tr>
+                        <tr>
+                            <th>Periode Orbit</th>
+                            <td>27.3 Hari Bumi</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <!-- Detailed Description Card (Bottom Section) -->
+        <section class="card-content description-card" aria-label="Deskripsi Lengkap Moon">
+            <h2 class="display-sm">Sejarah & Karakteristik Orbit</h2>
+            <p>
+                Bulan adalah satu-satunya satelit alami Bumi. Dengan diameter sekitar seperempat dari diameter Bumi, Bulan merupakan satelit alami terbesar di Tata Surya dibandingkan dengan ukuran planet induknya. Bulan berada dalam rotasi sinkron dengan Bumi, yang berarti sisi yang sama selalu menghadap ke arah kita.
+            </p>
+            <p>
+                Gaya gravitasi Bulan adalah penyebab utama terjadinya pasang surut air laut di Bumi. Tarikan gravitasinya juga sedikit memperlambat rotasi Bumi seiring berjalannya waktu geologis. Permukaan Bulan dipenuhi dengan dataran tinggi yang terang dan kawah tubrukan yang gelap (disebut maria).
+            </p>
+
+            <h2 class="display-sm" style="margin-top: 16px;">Fakta Menarik</h2>
+            <ul class="fun-facts">
+                <li>Bulan adalah satu-satunya benda langit selain Bumi yang pernah diinjak oleh kaki manusia, pertama kali dicapai oleh misi Apollo 11 pada tahun 1969.</li>
+                <li>Bulan tidak memiliki atmosfer yang signifikan, sehingga tidak ada cuaca, angin, atau pelapukan di permukaannya. Jejak kaki para astronaut Apollo akan tetap bertahan di sana hingga jutaan tahun.</li>
+                <li>Bulan secara perlahan bergerak menjauh dari Bumi sekitar 3.8 cm setiap tahunnya.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">SOLAR SYSTEM</div>
+            <div class="footer-copy">&copy; 2026 Solar System Explorer. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Three.js Module Import -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="js/planet-viewer.js"></script>
+</body>
+</html>

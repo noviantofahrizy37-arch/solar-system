@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth (Bumi) - Solar System Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="nav-bar">
+        <a class="nav-bar__logo" href="index.html">SOLAR SYSTEM</a>
+        <div class="nav-links">
+            <a class="nav-link" href="index.html">Beranda</a>
+            <a class="button-primary" href="index.html">Jelajahi Tata Surya</a>
+        </div>
+    </nav>
+
+    <!-- Detail Layout -->
+    <main class="container detail-layout">
+        <!-- Top Section Grid (WIREFRAME.png style) -->
+        <div class="detail-grid">
+            <!-- 3D Model (Left Column) -->
+            <section class="card-content model-card" aria-label="Visualisasi 3D Earth">
+                <div class="canvas-container">
+                    <canvas id="planet-canvas" data-model="assets/models/earth.glb"></canvas>
+                </div>
+                <div class="model-instructions">Gunakan mouse untuk memutar dan zoom model 3D</div>
+            </section>
+
+            <!-- Key Characteristics (Right Column) -->
+            <section class="card-content info-card" aria-label="Informasi Utama Earth">
+                <span class="eyebrow">Planet Terestrial</span>
+                <h1 class="display-md">Earth (Bumi)</h1>
+                <p class="body-sm" style="color: var(--body); margin-bottom: 16px;">
+                    Planet tempat kehidupan berkembang dan air melimpah.
+                </p>
+                <table class="data-table">
+                    <tbody>
+                        <tr>
+                            <th>Tipe</th>
+                            <td>Planet Terestrial</td>
+                        </tr>
+                        <tr>
+                            <th>Massa</th>
+                            <td>5.972 × 10²⁴ kg</td>
+                        </tr>
+                        <tr>
+                            <th>Diameter</th>
+                            <td>12,742 km</td>
+                        </tr>
+                        <tr>
+                            <th>Jarak dari Matahari</th>
+                            <td>149.6 juta km</td>
+                        </tr>
+                        <tr>
+                            <th>Suhu Rata-rata</th>
+                            <td>15 °C</td>
+                        </tr>
+                        <tr>
+                            <th>Periode Orbit</th>
+                            <td>365.25 Hari Bumi</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <!-- Detailed Description Card (Bottom Section) -->
+        <section class="card-content description-card" aria-label="Deskripsi Lengkap Earth">
+            <h2 class="display-sm">Sejarah & Struktur Bumi</h2>
+            <p>
+                Bumi adalah planet ketiga dari Matahari dan satu-satunya objek astronomi yang diketahui mendukung kehidupan. Sekitar 29.2% permukaan Bumi adalah daratan yang terdiri dari benua dan pulau. Sisanya, 70.8%, ditutupi dengan air, sebagian besar oleh samudra, laut, dan teluk, tetapi juga oleh danau, sungai, dan air tawar lainnya, yang bersama-sama membentuk hidrosfer.
+            </p>
+            <p>
+                Atmosfer Bumi kaya akan nitrogen dan oksigen, dan menghasilkan efek rumah kaca alami yang menjaga suhu permukaan tetap stabil dan ramah bagi kehidupan. Kerak bumi terbagi menjadi beberapa lempeng tektonik yang bergerak lambat, menciptakan pegunungan, gunung berapi, dan gempa bumi selama jutaan tahun.
+            </p>
+
+            <h2 class="display-sm" style="margin-top: 16px;">Fakta Menarik</h2>
+            <ul class="fun-facts">
+                <li>Bumi adalah satu-satunya planet di Tata Surya yang tidak dinamai dari mitologi Romawi atau Yunani.</li>
+                <li>Atmosfer Bumi melindungi kita dari meteoroid yang mendekat, sebagian besar hancur di mesosfer sebelum sempat menabrak daratan.</li>
+                <li>Bumi memiliki satu satelit alami yang besar, yaitu Bulan, yang ukurannya sangat memengaruhi pasang surut laut dan menstabilkan kemiringan rotasi Bumi.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">SOLAR SYSTEM</div>
+            <div class="footer-copy">&copy; 2026 Solar System Explorer. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Three.js Module Import -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="js/planet-viewer.js"></script>
+</body>
+</html>

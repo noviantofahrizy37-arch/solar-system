@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Solar System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+    <main class="auth-page__container">
+        <section class="auth-screen" aria-label="Register">
+            <div class="auth-screen__header">
+                <a class="eyebrow auth-home-button" href="index.html">Kembali ke beranda</a>
+                <h1>Buat akun baru</h1>
+                <p>Daftarkan diri Anda untuk mulai menjelajah ruang angkasa.</p>
+            </div>
+
+            <form id="register-form" class="auth-card auth-card--single" novalidate>
+                <div class="alert-message" role="alert" aria-live="polite"></div>
+                <label>
+                    <span>Nama</span>
+                    <input type="text" name="name" placeholder="Nama Anda" autocomplete="name" required minlength="2">
+                </label>
+                <label>
+                    <span>Email</span>
+                    <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+                </label>
+                <label>
+                    <span>Password</span>
+                    <input type="password" name="password" placeholder="Minimal 8 karakter" autocomplete="new-password" required minlength="8">
+                </label>
+                <label>
+                    <span>Konfirmasi Password</span>
+                    <input type="password" name="confirmPassword" placeholder="Ulangi password" autocomplete="new-password" required minlength="8">
+                </label>
+                <button type="submit">Daftar</button>
+                <p class="auth-switch">
+                    Sudah punya akun? <a href="login.html">Masuk di sini</a>
+                </p>
+            </form>
+        </section>
+    </main>
+    <script type="module" src="js/auth.js"></script>
+</body>
+</html>

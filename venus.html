@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venus - Solar System Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="nav-bar">
+        <a class="nav-bar__logo" href="index.html">SOLAR SYSTEM</a>
+        <div class="nav-links">
+            <a class="nav-link" href="index.html">Beranda</a>
+            <a class="button-primary" href="index.html">Jelajahi Tata Surya</a>
+        </div>
+    </nav>
+
+    <!-- Detail Layout -->
+    <main class="container detail-layout">
+        <!-- Top Section Grid (WIREFRAME.png style) -->
+        <div class="detail-grid">
+            <!-- 3D Model (Left Column) -->
+            <section class="card-content model-card" aria-label="Visualisasi 3D Venus">
+                <div class="canvas-container">
+                    <canvas id="planet-canvas" data-model="assets/models/venus.glb"></canvas>
+                </div>
+                <div class="model-instructions">Gunakan mouse untuk memutar dan zoom model 3D</div>
+            </section>
+
+            <!-- Key Characteristics (Right Column) -->
+            <section class="card-content info-card" aria-label="Informasi Utama Venus">
+                <span class="eyebrow">Planet Terestrial</span>
+                <h1 class="display-md">Venus</h1>
+                <p class="body-sm" style="color: var(--body); margin-bottom: 16px;">
+                    Planet terpanas di tata surya dengan atmosfer tebal yang memerangkap panas.
+                </p>
+                <table class="data-table">
+                    <tbody>
+                        <tr>
+                            <th>Tipe</th>
+                            <td>Planet Terestrial</td>
+                        </tr>
+                        <tr>
+                            <th>Massa</th>
+                            <td>4.867 × 10²⁴ kg</td>
+                        </tr>
+                        <tr>
+                            <th>Diameter</th>
+                            <td>12,104 km</td>
+                        </tr>
+                        <tr>
+                            <th>Jarak dari Matahari</th>
+                            <td>108.2 juta km</td>
+                        </tr>
+                        <tr>
+                            <th>Suhu Permukaan</th>
+                            <td>~475 °C</td>
+                        </tr>
+                        <tr>
+                            <th>Periode Orbit</th>
+                            <td>225 Hari Bumi</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <!-- Detailed Description Card (Bottom Section) -->
+        <section class="card-content description-card" aria-label="Deskripsi Lengkap Venus">
+            <h2 class="display-sm">Sejarah & Suasana Atmosfer</h2>
+            <p>
+                Venus adalah planet kedua dari Matahari dan tetangga planet terdekat kita. Dinamai dari dewi cinta dan kecantikan Romawi, Venus adalah satu-satunya planet yang dinamai menurut nama wanita. Meskipun ukurannya sangat mirip dengan Bumi, kondisinya sangat berlawanan dan mematikan bagi kehidupan manusia.
+            </p>
+            <p>
+                Venus memiliki atmosfer tebal dan beracun yang dipenuhi dengan gas karbon dioksida dan awan asam sulfat kekuningan yang memerangkap panas dalam efek rumah kaca yang tak terkendali. Hal ini menjadikan Venus planet terpanas di Tata Surya kita, dengan suhu permukaan yang cukup panas untuk melelehkan timah. Tekanan udara di permukaannya juga luar biasa tinggi, setara dengan kedalaman 1 km di bawah laut Bumi.
+            </p>
+
+            <h2 class="display-sm" style="margin-top: 16px;">Fakta Menarik</h2>
+            <ul class="fun-facts">
+                <li>Venus berputar pada porosnya dengan arah yang berlawanan dari kebanyakan planet lain di tata surya (rotasi retrograde).</li>
+                <li>Satu hari di Venus (waktu rotasi) lebih lama daripada satu tahunnya (waktu revolusi mengitari Matahari).</li>
+                <li>Karena kecerlangannya di langit malam, Venus sering disebut sebagai "Bintang Kejora" atau "Bintang Senja".</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">SOLAR SYSTEM</div>
+            <div class="footer-copy">&copy; 2026 Solar System Explorer. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Three.js Module Import -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="js/planet-viewer.js"></script>
+</body>
+</html>
