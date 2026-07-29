@@ -7,11 +7,50 @@
     <title>Solar System Explorer</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .hero-vlog-button {
+            position: absolute;
+            top: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border-radius: 24px;
+            background: var(--primary);
+            color: var(--ink);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            border: none;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 16px rgba(159, 232, 112, 0.35);
+            white-space: nowrap;
+        }
+        .hero-vlog-button:hover {
+            background: var(--primary-active);
+            transform: translateX(-50%) translateY(-2px);
+        }
+        .hero-vlog-button svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+    </style>
 </head>
 
 <body>
 
     <section class="hero-3d" aria-label="Tampilan 3D tata surya">
+        <!-- My Vlog button top-center -->
+        <a class="hero-vlog-button" href="my-vlog.html" aria-label="My Vlog">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11l-4 4Z"/>
+            </svg>
+            My Vlog
+        </a>
         <a class="hero-auth-button" href="login.html">Login / Register</a>
         <div class="hero-overlay">
             <p class="hero-kicker">SOLAR SYSTEM / NV</p>
